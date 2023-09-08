@@ -17,7 +17,7 @@ int main(void)
 			d++;
 		}
 	while
-		(c <= 'E') {
+		(c <= 'A') {
 			putchar(c);
 			c++;
 		}
