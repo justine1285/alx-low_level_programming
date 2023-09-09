@@ -1,35 +1,42 @@
 #include <stdio.h>
 /**
- * main - Entry point 
+ * main - Entry point
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int ones = '0';
-	int tens = '0';
-	int hundreds = '0';
+	int num1, num2, num3;
 
-	for (hundreds = '0'; hundreds <= '9'; hundreds++)
+	num1 = '0';
+	num2 = '0';
+	num3 = '0';
+
+	while (num1 <= '9')
 	{
-		for (tens = '0'; tens <= '9'; tens++)
+		while (num2 <= '9')
 		{
-			for (ones = '0'; ones <= '9'; ones++)
+			num3 = '0';
+			while (num3 <= '9')
 			{
-				if (!((ones == tens) || (tens == hundreds) || 
-			                                (tens > ones) || (hundreds > tens))) 
+				if (num1 < num2 && num2 < num3)
 				{
-					putchar(hundreds);
-					putchar(tens);
-					putchar(ones);
-					if (!(ones == '9' && hundreds == '7' && tens == '8'))
+					putchar(num1);
+					putchar(num2);
+					putchar(num3);
+
+					if (num1 != '7')
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
+				num3++;
 			}
+			num2++;
 		}
+		num1++;
+		num2 = '0';
 	}
-        putchar('\n');
+	putchar('\n');
 	return (0);
-}	
+}
