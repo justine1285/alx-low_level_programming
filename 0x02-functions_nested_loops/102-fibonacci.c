@@ -15,7 +15,7 @@ int main(void)
 
 	for (i = 2; i < 50; i++)
 	{
-		fibonacci[1] = fibonacci[1 - 1] + fibonacci[1 - 2];
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
 
 		if (i == 49)
 		{
