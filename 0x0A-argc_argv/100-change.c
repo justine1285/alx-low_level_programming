@@ -23,13 +23,13 @@ int main(int argc, char *argv[])
 	{
 		if (i >= 25)
 			i -= 25;
-		if (i >= 10)
+		else if	(i >= 10)
 			i -= 10;
-		if (i >= 5)
+		else if	(i >= 5)
 			i -= 5;
-		if (i >= 2)
+		else if	(i >= 2)
 			i -= 2;
-		if (i >= 1)
+		else if	(i >= 1)
 			i -= 1;
 		j += 1;
 	}
