@@ -2,7 +2,7 @@
 /**
  * delete_dnodeint_at_index - delete node at specific position
  * @head: double pointer to head node
- * @index: position of node to be delelted
+ * @index: position of node to be deleted
  * Return: 1 if successful, otherwise fail
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
@@ -35,4 +35,3 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	free(new);
 	return (1);
 }
-
