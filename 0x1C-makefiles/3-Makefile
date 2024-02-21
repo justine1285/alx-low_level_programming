@@ -1,7 +1,7 @@
 CC=gcc
 NAME=school
 SRC=main.c school.c
-OBJ=$(SRC:.c=.o)
+OBJ=$(SRC:.c=.o) # defines the corresponding object file for each source file
 RM=rm -f
 
 all:$(SRC) $(NAME)
