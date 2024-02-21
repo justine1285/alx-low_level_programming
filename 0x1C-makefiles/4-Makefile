@@ -1,27 +1,19 @@
-CC=gcc
-NAME=school
-SRC=main.c school.c
-OBJ=$(SRC:.c=.o)
-RM=rm -f
-CFLAGS=-Wall -Werror -Wextra -pedantic
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
 
-all:$(SRC) $(NAME)
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-# create executable file
-# $@ represents the target name (executable name)
-# $^ represents the objevt files of the target
-$(NAME): $(OBJ)
-        $(CC) $(CFLAGS) -o $@ $^
-
-# deletes all Emacs and Vim temporary files along with the executable
 clean:
 	$(RM) *~ $(NAME)
 
-# deletes object files
 oclean:
 	$(RM) $(OBJ)
 
-fclean:
-	$(RM) *~ $(NAME) $(OBJ)
+fclean: clean oclean
 
-re: oclean all
+re: fclean all
