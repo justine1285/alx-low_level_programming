@@ -54,7 +54,7 @@ void array_print(int *array, size_t lo, size_t hi)
 	size_t i;
 
 	printf("Searching in array: ");
-	for (i = lo; i <+ hi; i++)
+	for (i = lo; i <= hi; i++)
 	{
 		printf("%d", array[i]);
 		if (i < hi)
